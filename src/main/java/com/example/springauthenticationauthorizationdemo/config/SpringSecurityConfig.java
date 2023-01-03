@@ -26,7 +26,8 @@ public class SpringSecurityConfig {
 
         http
                 .authorizeHttpRequests((authz) -> authz
-                        .antMatchers("/message")
+                        //.anyRequest()
+                        .requestMatchers("/message")
                         .authenticated()
                 )
                 .httpBasic();
